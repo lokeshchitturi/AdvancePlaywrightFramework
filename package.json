@@ -1,0 +1,15 @@
+{
+  "name": "advancedplaywrightframework",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {},
+  "devDependencies": {
+    "@playwright/test": "^1.58.0",
+    "@types/node": "^25.0.10"
+  }
+}

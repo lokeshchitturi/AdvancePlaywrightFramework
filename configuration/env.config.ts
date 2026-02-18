@@ -1,0 +1,4 @@
+export const ENV = {
+    username: "rahulshettyacademy",
+    password: "Learning@830$3mK2"
+}
