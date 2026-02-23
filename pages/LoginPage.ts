@@ -52,12 +52,12 @@ export class LoginPage {
         await this.modalOkayButton.click();
     }
 
-    async validateErrorMessageDisplayed() {
+    async validateErrorMessageDisplayed(): Promise<string|null> {
         await this.signInButton.click();
         await this.alertMessage.waitFor({state:'visible'});
         await expect(this.alertMessage).toHaveText('Empty username/password.')
         const errorMessage = await this.alertMessage.textContent();
         console.log(errorMessage)
-        expect(errorMessage).toBe('Empty username/password.');
+        return errorMessage;
     }
 }

@@ -1,4 +1,4 @@
-import { test, expect, Locator } from '@playwright/test'
+import { expect, test } from '@playwright/test'
 import { LoginPage } from '../pages/LoginPage'
 import { ENV } from '../configuration/env.config';
 
@@ -24,7 +24,8 @@ test('Handle dialog box', async ({ page }) => {
 });
 
 test('Validate error message @loginError',async({page})=>{
-    await loginPage.validateErrorMessageDisplayed()
+   const erroMessage = await loginPage.validateErrorMessageDisplayed()
+   expect(erroMessage).toBe('Empty username/password.');
 })
 
 
